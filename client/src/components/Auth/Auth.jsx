@@ -8,8 +8,10 @@ const Auth = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [login, setLogin] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const signUp = () => {
+    setLoading(true);
     if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
       toast(`Enter Valid Email`);
       return;
@@ -30,11 +32,14 @@ const Auth = () => {
       .then((response) => {
         toast(response.message);
         setLogin(true);
+        setLoading(false);
       })
       .catch((error) => console.log(error));
   };
 
   const logIn = () => {
+    setLoading(true);
+
     if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
       toast(`Enter Valid Email`);
       return;
@@ -52,11 +57,11 @@ const Auth = () => {
     })
       .then((res) => res.json())
       .then((response) => {
-        console.log(response);
         if (response.error) toast(response.error);
         else toast('LoggedIn Successfully');
         localStorage.setItem('user', JSON.stringify(response.user));
         localStorage.setItem('token', response.token);
+        setLoading(false);
         window.location.reload();
       })
       .catch((error) => console.log(error));
@@ -85,6 +90,7 @@ const Auth = () => {
   return (
     <>
       <Toaster />
+      {loading ? <span class="loader"></span> : ''}
       <div className="Auth">
         <div className="nav">
           <div className="left">

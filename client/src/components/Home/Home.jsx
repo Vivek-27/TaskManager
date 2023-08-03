@@ -9,6 +9,7 @@ import { IoClose } from 'react-icons/io5';
 import toast, { Toaster } from 'react-hot-toast';
 
 const Home = () => {
+  const [loading, setLoading] = useState(false);
   const [create, setCreate] = useState(true);
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');
@@ -22,6 +23,7 @@ const Home = () => {
   const curDate = new Date().toDateString();
 
   const addNewTask = () => {
+    setLoading(true);
     if (!title) {
       toast('Please add Title');
       return;
@@ -47,6 +49,7 @@ const Home = () => {
         } else {
           toast('Task Added Successfully');
           setCreate(true);
+          setLoading(false);
         }
       })
       .catch((err) => console.log(err));
@@ -68,6 +71,8 @@ const Home = () => {
       .catch((err) => console.log(err));
   };
   const deleteTask = (itemId) => {
+    setLoading(true);
+
     fetch(`/deleteTask/${itemId}`, {
       method: 'PUT',
       headers: {
@@ -78,10 +83,13 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => {
         setUpdate('updated');
+        setLoading(false);
       })
       .catch((err) => console.log(err));
   };
   const doneTask = (itemId) => {
+    setLoading(true);
+
     fetch(`/doneTask/${itemId}`, {
       method: 'PUT',
       headers: {
@@ -92,6 +100,7 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => {
         setUpdate('updated2');
+        setLoading(false);
       })
       .catch((err) => console.log(err));
   };
@@ -173,6 +182,7 @@ const Home = () => {
     <>
       <Toaster />
       <div id="home">
+        {loading ? <span class="loader"></span> : ''}
         <Navbar />
         {!create ? (
           <div className="create">
