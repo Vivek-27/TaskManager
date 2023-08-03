@@ -15,7 +15,7 @@ const Auth = () => {
       return;
     }
 
-    fetch('http://localhost:5000/signup', {
+    fetch('/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -40,7 +40,7 @@ const Auth = () => {
       return;
     }
 
-    fetch('http://localhost:5000/sign_in', {
+    fetch('/sign_in', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

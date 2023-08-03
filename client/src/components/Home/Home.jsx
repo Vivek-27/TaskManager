@@ -26,7 +26,7 @@ const Home = () => {
       toast('Please add Title');
       return;
     }
-    fetch('http://localhost:5000/addTask', {
+    fetch('/addTask', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ const Home = () => {
       .catch((err) => console.log(err));
   };
   const myTask = () => {
-    fetch('http://localhost:5000/myTask', {
+    fetch('/myTask', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ const Home = () => {
       .catch((err) => console.log(err));
   };
   const deleteTask = (itemId) => {
-    fetch(`http://localhost:5000/deleteTask/${itemId}`, {
+    fetch(`/deleteTask/${itemId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -82,7 +82,7 @@ const Home = () => {
       .catch((err) => console.log(err));
   };
   const doneTask = (itemId) => {
-    fetch(`http://localhost:5000/doneTask/${itemId}`, {
+    fetch(`/doneTask/${itemId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
