@@ -1,0 +1,124 @@
+.Auth {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.startup {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: max-content;
+}
+
+.startup > h1 {
+  padding: 5vh 0;
+  font-size: 5vh;
+  font-weight: 600;
+}
+
+.startup > button {
+  padding: 15px 5px !important;
+  margin: 15px 150px;
+  border-radius: 25px;
+}
+
+.startup > img {
+  width: 600px;
+  height: auto;
+}
+
+.Auth > .login {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Auth > .login > img {
+  position: absolute;
+  width: 900px;
+  z-index: -1;
+}
+
+.Auth > .login > .input {
+  width: 300px;
+  height: max-content;
+  background-color: rgba(238, 238, 238, 0.489);
+  backdrop-filter: blur(25px);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 0;
+  gap: 5px;
+  box-shadow: rgba(59, 59, 60, 0.584) 0px 0px 15px 5px inset;
+}
+
+.Auth > .login > .input > .btn {
+  margin: 10px 0;
+  width: 87%;
+}
+
+.Auth > .login > .input > .btn > button {
+  width: 100%;
+}
+
+.Auth > .login > .input > span {
+  font-size: 14px;
+  color: rgb(112, 106, 106);
+  cursor: pointer;
+}
+
+.Auth > .login > .input > .inp {
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.436);
+  border-radius: 8px;
+  padding: 12px;
+  /* box-shadow: rgba(177, 177, 177, 0.407) 0px 0px 15px 5px inset; */
+}
+
+.Auth > .login > .input > .inp > p {
+  color: rgb(141, 141, 141);
+}
+
+.Auth > .login > .input > .inp > input {
+  color: rgba(110, 110, 110, 0.838) !important;
+  width: 95%;
+}
+
+.Auth > .nav {
+  position: absolute;
+  top: 5%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 700px) {
+  .Auth > .nav {
+    width: 70%;
+  }
+}
+
+.Auth > .nav > .left > p {
+  text-shadow: 2px 2px 3px rgba(141, 139, 139, 0.299);
+}
+
+.Auth > .nav > .right {
+  display: flex;
+  gap: 15px;
+}
+
+.Auth > .login > .input > h1 {
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 9px rgba(21, 21, 21, 0.879);
+
+  padding-bottom: 20px;
+}

@@ -1,0 +1,400 @@
+.create {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-new-task {
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 25px 20px;
+  background-color: #ffffff22;
+  backdrop-filter: blur(25px);
+  box-shadow: rgba(158, 157, 161, 0.584) 0px 0px 15px 5px inset;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.304);
+  animation: display 0.5s linear;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+@keyframes display {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.create-new-task > h1 {
+  font-size: 5vw;
+  font-weight: 700;
+  color: #3d3d3d;
+  padding: 10px 0 15px 5px;
+}
+
+.create-new-task > button {
+  padding: 15px 15px;
+}
+
+.create-new-task > div {
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  background-color: #ffffff46;
+}
+.create-new-task > div > p {
+  font-size: 4vw;
+  font-weight: 500;
+  color: #2d2d2da6;
+}
+
+.create-new-task > .input-time {
+  display: flex;
+  flex-direction: row;
+}
+
+.create-new-task > .input-time > div {
+  width: 100%;
+  overflow: hidden;
+}
+
+.create-new-task > .input-time > .input {
+  display: flex;
+  gap: 10px;
+}
+.create-new-task > div > div > p {
+  font-size: 4vw;
+  font-weight: 500;
+  color: #2d2d2da6;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 35px;
+}
+
+nav > .left {
+  display: flex;
+  align-items: center;
+}
+
+nav > div > p {
+  font-size: 4vw;
+  padding-left: 5px;
+  color: #3d3d3d;
+  font-weight: 600;
+}
+
+nav > div > p > span {
+  font-size: 4vw;
+  color: #6f6f6f;
+}
+
+nav > .right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#home {
+  margin: 0 20px;
+  margin-bottom: 70px;
+  position: relative;
+}
+
+.home {
+  padding: 30px 0;
+}
+
+.home > .projects {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.home > .projects > .box {
+  width: 150px;
+  height: 150px;
+  background-color: rgba(0, 255, 255, 0.627);
+  box-shadow: rgba(113, 113, 113, 0.633) 0px 0px 15px 5px inset;
+
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home > .projects > .box > img {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+}
+.home > .mid {
+  margin: 20px 0;
+}
+
+.home > .mid > p {
+  font-size: 4.5vw;
+
+  font-weight: 700;
+  padding-bottom: 15px;
+}
+
+footer {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  border-top: 1px solid rgba(200, 200, 200, 0.662);
+}
+
+footer > ul {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  list-style: none;
+  color: rgb(60, 60, 60);
+  font-size: 6vw;
+  justify-content: space-around;
+}
+
+footer > ul > li {
+  cursor: pointer;
+}
+
+footer > ul > #addTask {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 8vw;
+  top: -40%;
+  color: white;
+  background-color: #7069f6;
+  padding: 20px;
+  border-radius: 50%;
+  box-shadow: rgba(4, 0, 255, 0.823) 0px 0px 15px 5px inset;
+}
+
+.myTaskBox {
+  width: 350px;
+  height: 150px;
+  background-color: blueviolet;
+  box-shadow: rgba(124, 124, 124, 0.468) 0px 0px 15px 5px inset;
+  border-radius: 20px;
+  padding: 15px 25px;
+  margin: 10px 0;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.myTaskBox:active {
+  scale: 0.97;
+}
+
+.myTaskBox > h2 {
+  font-size: 6vw;
+  padding-bottom: 5px;
+  color: #ffffff;
+}
+
+.myTaskBox > p {
+  font-size: 4.5vw;
+  width: 90%;
+  height: 55%;
+  white-space: nowrap;
+  color: #ffffff;
+}
+
+.myTaskBox > .delete {
+  width: 25px;
+  position: absolute;
+  right: 5%;
+  cursor: pointer;
+}
+
+.myTaskBox > .delete:active {
+  scale: 0.9;
+}
+
+.done {
+  width: 25px;
+  position: relative;
+  left: 0;
+}
+
+.myTaskBox > .time {
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+  color: white;
+}
+
+.myTaskBox > .doneStatus > img {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 5%;
+  bottom: 10%;
+  cursor: pointer;
+}
+
+.myTaskBox > .doneStatus > img:active {
+  scale: 0.9;
+}
+
+.myTaskBox > .newTaskEmoji {
+  position: absolute;
+  width: 80px;
+  right: 10%;
+  bottom: 10%;
+}
+
+@media (min-width: 700px) {
+  nav > div > p {
+    font-size: 16px;
+  }
+
+  nav > div > p > span {
+    font-size: 16px;
+  }
+
+  nav > .right {
+    gap: 20px;
+  }
+
+  #home {
+    margin: 0 10vw;
+    margin-bottom: 100px;
+  }
+
+  .home {
+    padding: 3vw 0;
+  }
+
+  .home > .projects > .box {
+    width: 250px;
+    height: 200px;
+  }
+
+  .home > .projects > .box > img {
+    width: 230px;
+    height: 180px;
+    object-fit: contain;
+  }
+  .home > .mid {
+    margin: 20px 0;
+  }
+
+  .home > .mid > p {
+    font-size: 22px;
+  }
+
+  footer {
+    width: 70px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    border-right: 1px solid rgba(200, 200, 200, 0.662);
+  }
+
+  footer > ul {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    padding: 8vw 0;
+    justify-content: space-around;
+  }
+
+  footer > ul > #addTask {
+    font-size: 8vw;
+    top: 0;
+    left: 35%;
+    padding: 15px;
+  }
+
+  .myTaskBox {
+    width: 550px;
+    height: 200px;
+  }
+
+  .myTaskBox > h2 {
+    font-size: 18px;
+    padding-bottom: 5px;
+  }
+
+  .myTaskBox > p {
+    font-size: 20px;
+  }
+
+  .create {
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+  }
+
+  .create-new-task {
+    gap: 10px;
+    padding: 35px 20px;
+    background-color: #ffffff22;
+    backdrop-filter: blur(25px);
+    box-shadow: rgba(158, 157, 161, 0.584) 0px 0px 15px 5px inset;
+    border: 1px solid rgba(255, 255, 255, 0.304);
+    animation: display 0.2s linear;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 0.2s ease;
+  }
+
+  @keyframes display {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+
+  .create-new-task > h1 {
+    font-size: 18px;
+  }
+
+  .create-new-task > div {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background-color: #ffffff46;
+  }
+  .create-new-task > div > p {
+    font-size: 16px;
+  }
+
+  .create-new-task > div > div > p {
+    font-size: 16px;
+  }
+}
