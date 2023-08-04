@@ -10,6 +10,7 @@
   position: fixed;
   z-index: 10;
   display: flex;
+  margin: 0 15px;
   flex-direction: column;
   gap: 5px;
   padding: 25px 20px;
