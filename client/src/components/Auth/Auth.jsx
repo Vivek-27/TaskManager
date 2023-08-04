@@ -17,7 +17,7 @@ const Auth = () => {
       return;
     }
 
-    fetch('/signup', {
+    fetch('https://taskmanager23-ulfl.onrender.com/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -45,7 +45,7 @@ const Auth = () => {
       return;
     }
 
-    fetch('/sign_in', {
+    fetch('https://taskmanager23-ulfl.onrender.com/sign_in', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

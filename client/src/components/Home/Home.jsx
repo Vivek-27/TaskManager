@@ -28,7 +28,7 @@ const Home = () => {
       toast('Please add Title');
       return;
     }
-    fetch('/addTask', {
+    fetch('https://taskmanager23-ulfl.onrender.com/addTask', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ const Home = () => {
       .catch((err) => console.log(err));
   };
   const myTask = () => {
-    fetch('/myTask', {
+    fetch('https://taskmanager23-ulfl.onrender.com/myTask', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ const Home = () => {
   const deleteTask = (itemId) => {
     setLoading(true);
 
-    fetch(`/deleteTask/${itemId}`, {
+    fetch(`https://taskmanager23-ulfl.onrender.com/deleteTask/${itemId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -90,7 +90,7 @@ const Home = () => {
   const doneTask = (itemId) => {
     setLoading(true);
 
-    fetch(`/doneTask/${itemId}`, {
+    fetch(`https://taskmanager23-ulfl.onrender.com/doneTask/${itemId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
