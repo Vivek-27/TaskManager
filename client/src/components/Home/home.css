@@ -219,13 +219,20 @@ footer > ul > #addTask {
   font-size: 6vw;
   padding-bottom: 5px;
   color: #ffffff;
+  width: 90%;
+  height: 25%;
+  text-overflow: ellipsis;
+  white-space: pre-wrap;
+  overflow: hidden;
 }
 
 .myTaskBox > p {
   font-size: 4.5vw;
   width: 90%;
-  height: 55%;
-  white-space: nowrap;
+  height: 45%;
+  text-overflow: ellipsis;
+  white-space: pre-wrap;
+  overflow: hidden;
   color: #ffffff;
 }
 
@@ -339,6 +346,7 @@ footer > ul > #addTask {
   .myTaskBox {
     width: 550px;
     height: 200px;
+    padding: 25px 20px;
   }
 
   .myTaskBox > h2 {
