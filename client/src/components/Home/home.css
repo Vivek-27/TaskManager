@@ -10,10 +10,10 @@
   position: fixed;
   z-index: 10;
   display: flex;
-  margin: 0 15px;
+  margin: 0 5%;
   flex-direction: column;
   gap: 5px;
-  padding: 25px 20px;
+  padding: 25px 5%;
   background-color: #ffffff22;
   backdrop-filter: blur(25px);
   box-shadow: rgba(158, 157, 161, 0.584) 0px 0px 15px 5px inset;
